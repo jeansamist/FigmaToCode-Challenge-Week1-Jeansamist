@@ -13,6 +13,7 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-gradient-to-r from-primary to-secondary text-primary-foreground box-shadow-button",
+        light: "bg-primary-foreground text-primary box-shadow-button",
       },
       size: {
         default: "h-14 px-7 py-4 text-lg",

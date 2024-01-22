@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./Card";
 export type ServiceCardProps = {
   illustration: string;
   title: ReactNode;
-  description: ReactNode;
+  description?: ReactNode;
 };
 
 export const ServiceCard: FunctionComponent<ServiceCardProps> = ({

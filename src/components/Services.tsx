@@ -54,7 +54,7 @@ export const Services: FunctionComponent = () => {
       <div className="container p-16 flex flex-col md:flex-row gap-4 items-center justify-between pt-36 pb-32">
         <div className="space-y-6 w-2/5">
           <h2 className="text-xl text-grass font-medium">Service</h2>
-          <h1 className="text-5xl font-bold text-title leading-tight">
+          <h1 className="text-3xl font-bold text-title leading-tight">
             Experienced in multiple medical practices
           </h1>
           <p>

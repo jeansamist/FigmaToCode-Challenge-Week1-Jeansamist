@@ -6,7 +6,7 @@ import decoration from "../assets/images/plusicons.png";
 
 export const About: FunctionComponent = () => {
   return (
-    <section className="my-44 container flex flex-col md:flex-row gap-4 items-center justify-center">
+    <section className="my-44 container flex flex-col md:flex-row gap-10 items-center justify-center">
       <div className="w-2/5 relative flex justify-start">
         <img src={img} alt="illustration" className="" />
         <img
@@ -16,9 +16,9 @@ export const About: FunctionComponent = () => {
         />
       </div>
 
-      <div className="space-y-6 w-2/5">
+      <div className="space-y-6 w-1/3">
         <h2 className="text-xl text-grass font-medium">About me</h2>
-        <h1 className="text-5xl font-bold text-title leading-tight">
+        <h1 className="text-3xl font-bold text-title leading-tight">
           A dedicated doctor with the core mission to help
         </h1>
         <p className="leading-normal">
