@@ -15,7 +15,7 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
   title,
 }) => {
   return (
-    <Card className="border-none shadow-xl rounded-4xl p-4 flex flex-col justify-between">
+    <Card className="border-none rounded-4xl p-4 flex flex-col justify-between">
       <CardHeader>
         <img
           src={illustration}

@@ -14,7 +14,7 @@ export const Card: FunctionComponent<CardProps> = ({
     <div
       {...props}
       className={cn(
-        "transition-colors duration-300 bg-card border border-accent rounded",
+        "transition-colors duration-300 bg-card border border-accent rounded box-shadow-card",
         hoverable &&
           "transition-colors bg-transparent hover:bg-card text-muted-foreground hover:text-foreground",
         props.className

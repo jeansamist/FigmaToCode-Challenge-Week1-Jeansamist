@@ -6,7 +6,7 @@
 @layer base {
   :root {
     --primary: 213 91% 60%;
-    --secondary: 257 95% 60%;
+    --secondary: 234 92% 65%;
     --background: 200 33% 98%;
     --background-variant: 217 100% 97%;
     /* Texts Colors Variables */
@@ -29,6 +29,14 @@
 
 .decoration {
   animation: rebond 7s ease infinite;
+}
+
+.box-shadow-card {
+  box-shadow: 0 24px 32px rgba(3, 9, 50, 0.04);
+}
+
+.box-shadow-button {
+  box-shadow: 0 8px 23px rgba(65, 132, 247, 0.24);
 }
 
 @keyframes rebond {
