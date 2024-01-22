@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 213 91% 60%;
+    --secondary: 257 95% 60%;
+    --background: 200 33% 98%;
+    --background-variant: 217 100% 97%;
+    /* Texts Colors Variables */
+    --text-color: 216 29% 55%;
+    --title: 218 89% 10%;
+    --grass: 172 100% 37%;
+    --white: 0 0% 100%;
+    --shadow: 218 92% 61% 24%;
+    --radius: 2em;
+  }
+}
+
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.decoration {
+  animation: rebond 7s ease infinite;
+}
+
+@keyframes rebond {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-24px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

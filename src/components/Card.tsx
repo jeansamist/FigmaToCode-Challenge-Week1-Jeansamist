@@ -1,0 +1,61 @@
+import { cn } from "../lib/utils";
+import { FunctionComponent, ComponentProps } from "react";
+
+interface CardProps extends ComponentProps<"div"> {
+  hoverable?: boolean;
+}
+
+export const Card: FunctionComponent<CardProps> = ({
+  children,
+  hoverable = false,
+  ...props
+}) => {
+  return (
+    <div
+      {...props}
+      className={cn(
+        "transition-colors duration-300 bg-card border border-accent rounded",
+        hoverable &&
+          "transition-colors bg-transparent hover:bg-card text-muted-foreground hover:text-foreground",
+        props.className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const CardContent: FunctionComponent<ComponentProps<"div">> = ({
+  children,
+  ...props
+}) => {
+  return <div className={cn("p-4", props.className)}>{children}</div>;
+};
+
+export const CardHeader: FunctionComponent<ComponentProps<"header">> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <header className={cn("p-4 pb-0", props.className)}>{children}</header>
+  );
+};
+export const CardFooter: FunctionComponent<ComponentProps<"footer">> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <footer className={cn("p-4 pt-0", props.className)}>{children}</footer>
+  );
+};
+
+export const CardTitle: FunctionComponent<ComponentProps<"h1">> = ({
+  children,
+  ...props
+}) => {
+  return (
+    <h1 className={cn("text-xl md:text-3xl font-bold", props.className)}>
+      {children}
+    </h1>
+  );
+};
