@@ -21,7 +21,7 @@ export const Why: FunctionComponent = () => {
   ]);
   return (
     <section className="my-32">
-      <div className="container p-20 space-y-3">
+      <div className="container md:p-20 space-y-3">
         <motion.h2 className="text-center text-grass font-medium text-xl">
           Why Dr. Matthew Anderson?
         </motion.h2>
@@ -63,7 +63,7 @@ export const Why: FunctionComponent = () => {
           elementum. Tellus quam mauris aenean turpis vulputate sodales nullam
           lobortis. Vulputate tortor tincidun.
         </motion.p>
-        <div className="flex mx-auto w-full 2xl:w-[1440px] justify-center gap-7 translate-y-1/2">
+        <div className="flex flex-col md:flex-row items-center mx-auto lg:w-[80%] 2xl:w-[1440px] w-full justify-center gap-7 translate-y-4">
           {CARDS.map((props, key) => (
             <HeroCard2 {...props} key={key} />
           ))}

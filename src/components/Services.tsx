@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { LuMessageCircle } from "react-icons/lu";
 import { Button } from "./Button";
 import illustration from "../assets/images/Visual.png";
@@ -11,6 +11,7 @@ import cardIllustration6 from "../assets/images/card-illustration (6).png";
 import { ServiceCard, ServiceCardProps } from "./ServiceCard";
 import { VARIANTS } from "../lib/variants";
 import { motion } from "framer-motion";
+import { Carousel } from "./Carousel";
 export const Services: FunctionComponent = () => {
   const [SERVICES] = useState<ServiceCardProps[]>([
     {
@@ -50,6 +51,12 @@ export const Services: FunctionComponent = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum eget vel, nunc nulla feugiat. Metus ut.",
     },
   ]);
+  const [small, setsmall] = useState<boolean>(false);
+
+  useEffect(() => {
+    setsmall(window.innerWidth <= 768);
+    window.addEventListener("resize", () => setsmall(window.innerWidth <= 768));
+  }, []);
   return (
     <section className="min-h-screen bg-background-variant pb-32">
       <motion.div
@@ -57,11 +64,11 @@ export const Services: FunctionComponent = () => {
         initial={"hiddenX"}
         whileInView={"visibleX"}
         viewport={{ once: true }}
-        className="container p-16 flex flex-col md:flex-row gap-4 items-center justify-between pt-36 pb-32"
+        className="container p-8 md:p-16 flex flex-col-reverse md:flex-row gap-4 items-center justify-between pt-36 pb-32"
       >
-        <div className="space-y-6 w-2/5">
+        <div className="space-y-4 md:space-y-6 md:w-2/5">
           <h2 className="text-xl text-grass font-medium">Service</h2>
-          <h1 className="text-3xl font-bold text-title leading-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-title leading-tight">
             Experienced in multiple medical practices
           </h1>
           <p>
@@ -69,11 +76,13 @@ export const Services: FunctionComponent = () => {
             eget vel, nunc nulla feugiat. Metus ut.
           </p>
 
-          <Button className="space-x-4">
-            <LuMessageCircle size={24} /> <span>Book an appointment</span>
-          </Button>
+          <div className="flex justify-center md:justify-start pt-6 md:pt-0">
+            <Button className="space-x-4">
+              <LuMessageCircle size={24} /> <span>Book an appointment</span>
+            </Button>
+          </div>
         </div>
-        <div className="w-1/2 relative flex justify-end">
+        <div className="md:w-1/2 relative flex justify-end">
           <motion.img
             src={illustration}
             alt="illustration"
@@ -85,11 +94,21 @@ export const Services: FunctionComponent = () => {
           />
         </div>
       </motion.div>
-      <div className="container px-24 grid grid-cols-3 gap-8">
-        {SERVICES.map((services, key) => (
-          <ServiceCard {...services} key={key} />
-        ))}
-      </div>
+      {small ? (
+        <Carousel>
+          {SERVICES.map((services, key) => (
+            <div className="p-8" key={key}>
+              <ServiceCard {...services} />
+            </div>
+          ))}
+        </Carousel>
+      ) : (
+        <div className="container px-24 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {SERVICES.map((services, key) => (
+            <ServiceCard {...services} key={key} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

@@ -16,7 +16,7 @@ const buttonVariants = cva(
         light: "bg-primary-foreground text-primary box-shadow-button",
       },
       size: {
-        default: "h-14 px-7 py-4 text-lg",
+        default: "h-11 md:h-14 md:px-7 px-4 py-4 text-base md:text-lg",
       },
     },
     defaultVariants: {

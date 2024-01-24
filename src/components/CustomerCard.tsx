@@ -16,12 +16,20 @@ export const CustomerCard: FunctionComponent<CustomerCardProps> = ({
 }) => {
   return (
     <Card className="border-none rounded-4xl box-shadow-card p-6 space-y-4">
-      <i className="text-title leading-loose">{description}</i>
-      <CardFooter className="flex gap-4 p-0">
-        <img src={avatar} alt="avatar" />
-        <div>
-          <div className="font-medium text-lg text-grass">{name}</div>
-          <div className="text-sm">{category} Patient</div>
+      <i className="text-title leading-loose md:text-base text-sm">
+        {description}
+      </i>
+      <CardFooter className="flex gap-4 p-0 items-center">
+        <img
+          src={avatar}
+          alt="avatar"
+          className="w-[48px] aspect-square object-cover h-[48px]"
+        />
+        <div className="w-[calc(100%-48px-16px)]">
+          <div className="font-medium text-[15px] md:text-lg text-grass">
+            {name}
+          </div>
+          <div className="text-xs md:text-sm">{category} Patient</div>
         </div>
       </CardFooter>
     </Card>

@@ -7,21 +7,21 @@ import { VARIANTS } from "../lib/variants";
 export const Schedule: FunctionComponent = () => {
   return (
     <motion.section
-      className="my-32"
+      className="md:my-32"
       variants={VARIANTS}
       initial={"hiddenScale"}
       whileInView={"visibleScale"}
       viewport={{ once: true }}
     >
-      <div className="container p-16 relative">
+      <div className="container p-16 px-8 md:p-16 relative">
         <div className="text-center text-grass font-medium text-xl mb-3">
           Book an appointment
         </div>
-        <div className="bg-gradient-to-br from-primary space-y-4 text-center to-secondary/60 p-20 px-32 rounded-4xl text-primary-foreground">
-          <h1 className="font-semibold text-3xl">
+        <div className="bg-gradient-to-br from-primary space-y-4 text-center to-secondary/60 p-8 md:p-20 md:px-32 rounded-4xl text-primary-foreground">
+          <h1 className="font-semibold text-2xl md:text-3xl">
             Schedule a virtual or presential appointment today
           </h1>
-          <p className="leading-loose w-3/5 mx-auto">
+          <p className="md:leading-loose md:w-3/5 mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
             egestas viverra turpis habitant eu sociis fermentum felis.
           </p>
