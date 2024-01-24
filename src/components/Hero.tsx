@@ -9,7 +9,8 @@ import { Button } from "../components/Button";
 import illustration from "../assets/images/hero-illustration.png";
 import decoration from "../assets/images/hero-illustration-decoration.png";
 import { HeroCard, HeroCardProps } from "./HeroCard";
-
+import { motion } from "framer-motion";
+import { VARIANTS } from "../lib/variants";
 export const Hero: FunctionComponent = () => {
   const [CARDS] = useState<HeroCardProps[]>([
     {
@@ -32,7 +33,13 @@ export const Hero: FunctionComponent = () => {
     <>
       <div className="min-h-screen rounded-4xl bg-background-variant relative flex justify-center items-center z-0">
         <div className="p-16 flex flex-col md:flex-row gap-4 items-center justify-between pt-36 pb-32">
-          <div className="space-y-6 w-2/5">
+          <motion.div
+            variants={VARIANTS}
+            initial={"hiddenY"}
+            whileInView={"visibleY"}
+            viewport={{ once: true }}
+            className="space-y-6 w-2/5"
+          >
             <h2 className="text-xl text-grass font-medium">
               Dr. Matthew Anderson
             </h2>
@@ -47,9 +54,17 @@ export const Hero: FunctionComponent = () => {
             <Button className="space-x-4">
               <LuMessageCircle size={24} /> <span>Book an appointment</span>
             </Button>
-          </div>
+          </motion.div>
           <div className="w-2/5 relative flex justify-end">
-            <img src={illustration} alt="illustration" className="w-full" />
+            <motion.img
+              src={illustration}
+              alt="illustration"
+              className="w-full"
+              variants={VARIANTS}
+              initial={"hiddenScale"}
+              whileInView={"visibleScale"}
+              viewport={{ once: true }}
+            />
             <img
               src={decoration}
               alt="decoration"

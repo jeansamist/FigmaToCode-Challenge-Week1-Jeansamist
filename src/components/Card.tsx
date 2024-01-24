@@ -1,6 +1,7 @@
 import { cn } from "../lib/utils";
 import { FunctionComponent, ComponentProps } from "react";
-
+import { motion } from "framer-motion";
+import { VARIANTS } from "../lib/variants";
 interface CardProps extends ComponentProps<"div"> {
   hoverable?: boolean;
 }
@@ -11,17 +12,24 @@ export const Card: FunctionComponent<CardProps> = ({
   ...props
 }) => {
   return (
-    <div
-      {...props}
-      className={cn(
-        "duration-300 bg-card border border-accent rounded box-shadow-card hover:scale-105 transition-transform",
-        hoverable &&
-          "transition-colors bg-transparent hover:bg-card text-muted-foreground hover:text-foreground",
-        props.className
-      )}
+    <motion.div
+      variants={VARIANTS}
+      initial={"hiddenScale"}
+      whileInView={"visibleScale"}
+      viewport={{ once: true }}
     >
-      {children}
-    </div>
+      <div
+        {...props}
+        className={cn(
+          "duration-300 bg-card border border-accent rounded box-shadow-card hover:scale-105 transition-transform",
+          hoverable &&
+            "transition-colors bg-transparent hover:bg-card text-muted-foreground hover:text-foreground",
+          props.className
+        )}
+      >
+        {children}
+      </div>
+    </motion.div>
   );
 };
 

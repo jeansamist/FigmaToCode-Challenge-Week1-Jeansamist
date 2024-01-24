@@ -9,7 +9,8 @@ import cardIllustration4 from "../assets/images/card-illustration (4).png";
 import cardIllustration5 from "../assets/images/card-illustration (5).png";
 import cardIllustration6 from "../assets/images/card-illustration (6).png";
 import { ServiceCard, ServiceCardProps } from "./ServiceCard";
-
+import { VARIANTS } from "../lib/variants";
+import { motion } from "framer-motion";
 export const Services: FunctionComponent = () => {
   const [SERVICES] = useState<ServiceCardProps[]>([
     {
@@ -51,7 +52,13 @@ export const Services: FunctionComponent = () => {
   ]);
   return (
     <section className="min-h-screen bg-background-variant pb-32">
-      <div className="container p-16 flex flex-col md:flex-row gap-4 items-center justify-between pt-36 pb-32">
+      <motion.div
+        variants={VARIANTS}
+        initial={"hiddenX"}
+        whileInView={"visibleX"}
+        viewport={{ once: true }}
+        className="container p-16 flex flex-col md:flex-row gap-4 items-center justify-between pt-36 pb-32"
+      >
         <div className="space-y-6 w-2/5">
           <h2 className="text-xl text-grass font-medium">Service</h2>
           <h1 className="text-3xl font-bold text-title leading-tight">
@@ -67,9 +74,17 @@ export const Services: FunctionComponent = () => {
           </Button>
         </div>
         <div className="w-1/2 relative flex justify-end">
-          <img src={illustration} alt="illustration" className="w-full" />
+          <motion.img
+            src={illustration}
+            alt="illustration"
+            className="w-full"
+            variants={VARIANTS}
+            initial={"hiddenScale"}
+            whileInView={"visibleScale"}
+            viewport={{ once: true }}
+          />
         </div>
-      </div>
+      </motion.div>
       <div className="container px-24 grid grid-cols-3 gap-8">
         {SERVICES.map((services, key) => (
           <ServiceCard {...services} key={key} />
