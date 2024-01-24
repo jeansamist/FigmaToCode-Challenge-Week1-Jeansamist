@@ -67,10 +67,9 @@ export const Customer: FunctionComponent = () => {
           <h2 className="font-semibold text-2xl md:text-3xl text-center text-title md:w-3/5 mx-auto">
             What our great customers say about Dr. Matthew Anderson
           </h2>
-          <p className="leading-loose text-center md:w-3/5 mx-auto">
+          <p className="leading-loose text-center md:w-3/5 mx-auto sora">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore sed do eiusmod tempor
-            incididunt ut labore et dolore
+            eiusmod tempor incididunt ut labore et dolore
           </p>
         </motion.div>
 

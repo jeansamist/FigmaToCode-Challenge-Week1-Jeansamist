@@ -46,7 +46,7 @@ export const Hero: FunctionComponent = () => {
             <h1 className="text-3xl md:text-5xl font-bold text-title leading-tight">
               A dedicated doctor you can trust
             </h1>
-            <p>
+            <p className="sora">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
               eget vel, nunc nulla feugiat. Metus ut.
             </p>

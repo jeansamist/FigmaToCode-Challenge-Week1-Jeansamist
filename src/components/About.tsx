@@ -36,7 +36,7 @@ export const About: FunctionComponent = () => {
         <h1 className="text-2xl lg:text-3xl font-bold text-title leading-tight">
           A dedicated doctor with the core mission to help
         </h1>
-        <p className="leading-normal">
+        <p className="leading-normal sora">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam proin
           nibh cursus at sed sagittis amet, sed. Tristique id nibh lobortis nunc
           elementum. Tellus quam mauris aenean turpis vulputate sodales nullam

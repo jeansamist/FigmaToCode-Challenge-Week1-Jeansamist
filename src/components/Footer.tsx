@@ -18,7 +18,7 @@ export const Footer: FunctionComponent = () => {
             viewport={{ once: true }}
           >
             <img src={brand} alt="logo" className="w-36 mb-4" />
-            <i className="mb-4 opacity-75 text-sm md:text-base">
+            <i className="mb-4 opacity-75 text-sm md:text-base sora">
               8 W. South St.Buford, GA 30518 <br /> 5 Briarwood LaneVienna, VA
               22180 RER
             </i>
@@ -37,23 +37,27 @@ export const Footer: FunctionComponent = () => {
           >
             <div className="flex flex-col gap-4">
               <h2 className="font-bold text-base md:text-lg">Company Info</h2>
-              <div className="opacity-75 text-sm md:text-base">About</div>
-              <div className="opacity-75 text-sm md:text-base">Services</div>
-              <div className="opacity-75 text-sm md:text-base">Blog</div>
+              <div className="opacity-75 text-sm md:text-base sora">About</div>
+              <div className="opacity-75 text-sm md:text-base sora">
+                Services
+              </div>
+              <div className="opacity-75 text-sm md:text-base sora">Blog</div>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="font-bold text-base md:text-lg">Book Now</h2>
-              <div className="opacity-75 text-sm md:text-base">Appointment</div>
+              <div className="opacity-75 text-sm md:text-base sora">
+                Appointment
+              </div>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="font-bold text-base md:text-lg">Contact</h2>
-              <div className="opacity-75 text-sm md:text-base">
+              <div className="opacity-75 text-sm md:text-base sora">
                 +1 123456789
               </div>
-              <div className="opacity-75 text-sm md:text-base">
+              <div className="opacity-75 text-sm md:text-base sora">
                 remmcal@mail.com
               </div>
-              <div className="opacity-75 text-sm md:text-base">
+              <div className="opacity-75 text-sm md:text-base sora">
                 Phone: +1 123456789
               </div>
             </div>
@@ -61,7 +65,7 @@ export const Footer: FunctionComponent = () => {
         </div>
         <div className="w-full h-px bg-primary-foreground mb-8 opacity-70"></div>
         <motion.div
-          className="text-center opacity-75 text-xs md:text-sm"
+          className="text-center opacity-75 text-xs md:text-sm sora"
           variants={VARIANTS}
           initial={"hiddenY"}
           whileInView={"visibleY"}

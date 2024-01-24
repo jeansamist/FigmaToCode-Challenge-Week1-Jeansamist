@@ -22,9 +22,9 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
           alt="service illustration"
           className="w-4/5 mx-auto mb-4 aspect-square object-contain"
         />
-        <CardTitle className="text-title">{title}</CardTitle>
+        <CardTitle className="font-medium text-title">{title}</CardTitle>
       </CardHeader>
-      <CardContent>{description}</CardContent>
+      <CardContent className="sora">{description}</CardContent>
       <CardFooter>
         <Button className="space-x-4 w-full">
           <LuMessageCircle size={24} /> <span>Book an appointment</span>

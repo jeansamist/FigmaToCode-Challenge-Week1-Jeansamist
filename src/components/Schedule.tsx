@@ -21,7 +21,7 @@ export const Schedule: FunctionComponent = () => {
           <h1 className="font-semibold text-2xl md:text-3xl">
             Schedule a virtual or presential appointment today
           </h1>
-          <p className="md:leading-loose md:w-3/5 mx-auto">
+          <p className="md:leading-loose md:w-3/5 mx-auto sora">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
             egestas viverra turpis habitant eu sociis fermentum felis.
           </p>

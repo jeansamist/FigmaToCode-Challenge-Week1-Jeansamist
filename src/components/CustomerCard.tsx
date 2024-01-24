@@ -29,7 +29,7 @@ export const CustomerCard: FunctionComponent<CustomerCardProps> = ({
           <div className="font-medium text-[15px] md:text-lg text-grass">
             {name}
           </div>
-          <div className="text-xs md:text-sm">{category} Patient</div>
+          <div className="text-xs md:text-sm sora">{category} Patient</div>
         </div>
       </CardFooter>
     </Card>

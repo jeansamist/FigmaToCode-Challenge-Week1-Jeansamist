@@ -71,7 +71,7 @@ export const Services: FunctionComponent = () => {
           <h1 className="text-2xl md:text-3xl font-bold text-title leading-tight">
             Experienced in multiple medical practices
           </h1>
-          <p>
+          <p className="sora">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
             eget vel, nunc nulla feugiat. Metus ut.
           </p>

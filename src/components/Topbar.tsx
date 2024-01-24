@@ -41,7 +41,7 @@ export const Topbar: FunctionComponent = () => {
   }, []);
 
   return (
-    <header className="absolute top-0 left-0 px-2 py-4 md:p-8 md:px-4 lg:p-8 w-full z-10">
+    <header className="absolute top-0 left-0 px-2 py-4 md:p-8 md:px-4 lg:p-8 w-full z-10 sora">
       <nav className="container flex items-center justify-between h-14">
         <img src={brand} alt="logo" className="w-28 md:w-36" />
         <div

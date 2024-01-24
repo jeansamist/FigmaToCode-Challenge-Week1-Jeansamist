@@ -56,7 +56,7 @@ export const Why: FunctionComponent = () => {
           initial={"hiddenY"}
           whileInView={"visibleY"}
           viewport={{ once: true }}
-          className="leading-loose text-center w-4/5 mx-auto"
+          className="leading-loose text-center w-4/5 mx-auto sora"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam proin
           nibh cursus at sed sagittis amet, sed. Tristique id nibh lobortis nunc

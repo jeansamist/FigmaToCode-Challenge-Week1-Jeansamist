@@ -16,7 +16,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
       <Icon size={38} width={38} height={38} />
       <div className="space-y-1 w-[calc(100%-38px-0.75rem)]">
         <h3 className="font-semibold text-sm md:text-lg ">{title}</h3>
-        {description && <p className="text-[10px] opacity-80">{description}</p>}
+        {description && (
+          <p className="text-[10px] opacity-80 sora">{description}</p>
+        )}
       </div>
     </Card>
   );
