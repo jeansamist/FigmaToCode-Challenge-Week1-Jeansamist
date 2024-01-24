@@ -10,6 +10,9 @@ export const Topbar: FunctionComponent = () => {
     activate?: boolean;
     href: string;
   };
+  /*
+  I keep the list of site links in component state
+  */
   const [LINKS] = useState<link[]>([
     {
       label: "Home",
@@ -32,9 +35,16 @@ export const Topbar: FunctionComponent = () => {
       activate: false,
     },
   ]);
+
+  /*
+  This variable lets you know if the menu is open
+  */
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
+    /*
+    In order to be able to apply certain modifications to the resizing of the page we listen to the resize event
+    */
     window.addEventListener("resize", () =>
       setmenuIsOpen(window.innerWidth >= 768)
     );

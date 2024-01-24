@@ -48,8 +48,10 @@ export const Customer: FunctionComponent = () => {
       name: "Amanda Jackson",
     },
   ]);
+  /*
+  This variable allows you to know if the window is already small enough to apply the changes.
+  */
   const [small, setsmall] = useState<boolean>(false);
-
   useEffect(() => {
     setsmall(window.innerWidth <= 768);
     window.addEventListener("resize", () => setsmall(window.innerWidth <= 768));
