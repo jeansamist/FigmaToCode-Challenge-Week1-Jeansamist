@@ -75,8 +75,8 @@ export const Hero: FunctionComponent = () => {
       </div>
       <div className="flex flex-col md:flex-row items-center mx-auto w-[90%] lg:w-[80%] 2xl:w-[1440px] justify-center gap-7 -translate-y-1/4 md:-translate-y-1/2">
         {CARDS.map((props, key) => (
-          <div className="">
-            <HeroCard {...props} key={key} />
+          <div key={key}>
+            <HeroCard {...props} />
           </div>
         ))}
       </div>

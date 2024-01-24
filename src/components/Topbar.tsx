@@ -51,18 +51,16 @@ export const Topbar: FunctionComponent = () => {
           )}
         >
           {LINKS.map((link, key) => (
-            <>
-              <a
-                href={link.href}
-                className={cn(
-                  "transition-colors text-primary-foreground md:hover:text-primary md:text-foreground",
-                  link.activate && "md:text-primary"
-                )}
-                key={key}
-              >
-                {link.label}
-              </a>
-            </>
+            <a
+              href={link.href}
+              className={cn(
+                "transition-colors text-primary-foreground md:hover:text-primary md:text-foreground",
+                link.activate && "md:text-primary"
+              )}
+              key={key}
+            >
+              {link.label}
+            </a>
           ))}
           <Button className="space-x-4 md:hidden px-8" variant={"light"}>
             <LuMessageCircle size={24} /> <span>Book Now</span>
