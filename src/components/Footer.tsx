@@ -7,7 +7,7 @@ import { VARIANTS } from "../lib/variants";
 
 export const Footer: FunctionComponent = () => {
   return (
-    <footer className="bg-primary text-primary-foreground p-4 px-2 md:p-16">
+    <footer className="bg-primary text-primary-foreground p-4 px-2 md:p-16 w-full">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between mb-16 gap-16 md:gap-0">
           <motion.div

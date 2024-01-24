@@ -8,7 +8,7 @@ import { VARIANTS } from "../lib/variants";
 export const About: FunctionComponent = () => {
   return (
     <section className="mb-16 lg:my-44 container flex flex-col lg:flex-row gap-4 lg:gap-10 items-center justify-center">
-      <div className="lg:w-2/5 relative w-[120%] translate-x-2 lg:translate-x-0 inline-flex lg:justify-start justify-center">
+      <div className="lg:w-2/5 relative w-full scale-110 ld:scale-100 translate-x-2 lg:translate-x-0 inline-flex lg:justify-start justify-center">
         <motion.img
           src={img}
           alt="illustration"
